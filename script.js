@@ -26,3 +26,10 @@ function stopSound() {
     currentAudio.currentTime = 0;
   }
 }
+function showImage() {
+  document.getElementById("popup").style.display = "flex";
+}
+
+function hideImage() {
+  document.getElementById("popup").style.display = "none";
+}
