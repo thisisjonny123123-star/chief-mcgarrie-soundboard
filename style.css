@@ -1,33 +1,39 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Chief McGarrie RIP Soundboard</title>
-
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>Cheif Mcgarrie RIP Soundboard</h1>
-
-  <!-- Buttons go here -->
-  <button onclick="playSound('Buzzer.mp3')">Buzzer</button>
-  <button onclick="playSound('ChiefMagrie.mp3')">Chief Magpie sweet child of mine by Gian nunez</button>
-  <button onclick="playSound('ClashStart.mp3')">Clash Start</button>
-  <button onclick="playSound('Ding.mp3')">Ding</button>
-  <button onclick="playSound('GtaDeath.mp3')">GTA Death</button>
-  <button onclick="playSound('GtaMissionComplete.mp3')">Mission Complete</button>
-  <button onclick="playSound('Heheheha.mp3')">Heheheha</button>
-  <button onclick="playSound('MiniPekka.mp3')">Mini Pekka</button>
-  <button onclick="playSound('Syfm.mp3')">Syfm</button>
-  <button onclick="playSound('Vineboom.mp3')">Vine Boom</button>
-  <hr>
-  <div style="text-align: center;">
-    <img src="dumbassjoe.jpg" alt="Stupid Stupid Joe" style="width: 300px; margin-top: 20px;">
-  </div>
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 40px;
+    color: #333;
+  }
   
+  h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
   
-  <script src="script.js"></script>
-</body>
-</html>
+  button {
+    margin: 10px;
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e63946; /* 🔴 Red */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #b71c1c; /* 🔴 Darker red */
+  }
+  
+  img {
+    margin-top: 30px;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
 
   
+
 
