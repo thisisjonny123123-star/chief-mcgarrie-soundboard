@@ -26,6 +26,16 @@ function stopSound() {
     currentAudio.currentTime = 0;
   }
 }
+
+function stopAllSounds() {
+  // Fully stop and clear the current sound
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio.currentTime = 0;
+    currentAudio = null;
+  }
+}
+
 function showImage() {
   document.getElementById("popup").style.display = "flex";
 }
