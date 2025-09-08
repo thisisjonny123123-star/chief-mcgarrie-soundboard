@@ -21,6 +21,12 @@ function stopAllSounds() {
     audio.currentTime = 0;
   });
   activeSounds = [];
+
+  bonusAudio.forEach(audio => {
+    audio.pause();
+    audio.currentTime = 0;
+  });
+  bonusAudio = [];
 }
 
 function stopBonusSounds() {
@@ -51,4 +57,24 @@ function showImage() {
 function hideImage() {
   document.getElementById("popup").style.display = "none";
 }
+
+// 🌀 Animate dumbassjoe.jpg in circles
+let angle = 0;
+function animateJoe() {
+  const joe = document.getElementById("joe-flyer");
+  const radius = 150;
+  const centerX = window.innerWidth / 2;
+  const centerY = window.innerHeight / 2;
+
+  angle += 0.05;
+  const x = centerX + radius * Math.cos(angle);
+  const y = centerY + radius * Math.sin(angle);
+
+  joe.style.left = x + "px";
+  joe.style.top = y + "px";
+
+  requestAnimationFrame(animateJoe);
+}
+window.onload = animateJoe;
+
 
