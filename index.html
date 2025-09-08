@@ -5,69 +5,72 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>For your own good DO NOT play the sounds Joe requested 🙏 💔
-
-    Also joe yeah make sure to lock your basement window next time 🙏
+  <h1>For your own good DO NOT play the sounds Joe requested 🙏 💔<br>
+    Also Joe yeah make sure to lock your basement window next time 🙏
   </h1>
-<!-- Secret Unlock Box -->
-<div id="unlock-box" style="position: fixed; top: 10px; right: 10px;">
-  <input type="text" id="codeInput" placeholder="Enter Joe's house #" />
-  <button onclick="checkCode()">Unlock</button>
-</div>
 
-<!-- Hidden Bonus Buttons -->
-<div id="bonus-buttons" style="display: none; margin-top: 10px;">
-  <button onclick="playBonusSound('hubintro.mp3')">hub sound</button>
-  <button onclick="playBonusSound('clapping.mp3')">Clapping (Filmed from joseph)</button>
-  <button onclick="stopBonusSounds()">Cancel Bonus Sounds</button>
-</div>
+  <!-- Secret Unlock Box -->
+  <div id="unlock-box" style="position: fixed; top: 10px; right: 10px;">
+    <input type="text" id="codeInput" placeholder="Enter Joe's house #" />
+    <button onclick="checkCode()">Unlock</button>
+  </div>
+
+  <!-- Hidden Bonus Buttons -->
+  <div id="bonus-buttons" style="display: none; margin-top: 10px;">
+    <button onclick="playBonusSound('hubintro.mp3')">hub sound</button>
+    <button onclick="playBonusSound('clapping.mp3')">Clapping (Filmed from joseph)</button>
+    <button onclick="stopBonusSounds()">Cancel Bonus Sounds</button>
+  </div>
 
   <!-- Sound Buttons -->
-  <button onclick="playSound('Buzzer.mp3')">Buzzer</button>
-  <button onclick="playSound('ChiefMagrie.mp3')">Chief Magpie - Sweet Child of Mine</button>
-  <button onclick="playSound('ClashStart.mp3')">Clash Start</button>
-  <button onclick="playSound('Ding.mp3')">Ding</button>
-  <button onclick="playSound('GtaDeath.mp3')">GTA Death</button>
-  <button onclick="playSound('GtaMissionComplete.mp3')">Mission Complete</button>
-  <button onclick="playSound('Heheheha.mp3')">Heheheha</button>
-  <button onclick="playSound('MiniPekka.mp3')">Mini Pekka</button>
-  <button onclick="playSound('Syfm.mp3')">Syfm</button>
-  <button onclick="playSound('phonetext.mp3')">iPhone Ding 👍</button>
-  <button onclick="playSound('nomnomnom.mp3')">Joe wanted this sound</button>
-  <button onclick="playSound('minecraft-villager-sound-effect.mp3')">Villager from Minecraft</button>
-
-  <!-- New Sounds -->
-  <button onclick="playSound('adrian.mp3')">Adrian</button>
-  <button onclick="playSound('centuries.mp3')">This is another one Joseph Wanted</button>
-  <button onclick="playSound('classic_hurt.mp3')"> Hurt</button>
-  <button onclick="playSound('Knocking.mp3')">Knocking</button>
-  <button onclick="playSound('Explosion.mp3')">Explosion</button>
-  <button onclick="playSound('Gunshot.mp3')">Gunshot</button>
-  <button onclick="playSound('HeavenlyMusic.mp3')">Heavenly Music</button>
-  <button onclick="playSound('keyboard-typing-sound-effect.mp3')">Keyboard Typing</button>
-  <button onclick="playSound('m-e-o-w.mp3')">Meow</button>
-  <button onclick="playSound('minecraft_click.mp3')">Minecraft Click</button>
-  <button onclick="playSound('minecraft-drinking-sound-effect.mp3')">Minecraft Drinking</button>
-  <button onclick="playSound('0907.MP3')">Tommy requested htis one</button>
-  <button onclick="stopAllSounds()">Click this if a teacher is coming</button>
-
-
-
-  <hr>
-  <div style="text-align: center;">
-    <img src="dumbassjoe.jpg" alt="Stupid Stupid Joe" style="width: 300px; margin-top: 20px;">
+  <div id="sound-buttons">
+    <button onclick="playSound('Buzzer.mp3')">Buzzer</button>
+    <button onclick="playSound('ChiefMagrie.mp3')">Chief Magpie - Sweet Child of Mine</button>
+    <button onclick="playSound('ClashStart.mp3')">Clash Start</button>
+    <button onclick="playSound('Ding.mp3')">Ding</button>
+    <button onclick="playSound('GtaDeath.mp3')">GTA Death</button>
+    <button onclick="playSound('GtaMissionComplete.mp3')">Mission Complete</button>
+    <button onclick="playSound('Heheheha.mp3')">Heheheha</button>
+    <button onclick="playSound('MiniPekka.mp3')">Mini Pekka</button>
+    <button onclick="playSound('Syfm.mp3')">Syfm</button>
+    <button onclick="playSound('phonetext.mp3')">iPhone Ding 👍</button>
+    <button onclick="playSound('nomnomnom.mp3')">Joe wanted this sound</button>
+    <button onclick="playSound('minecraft-villager-sound-effect.mp3')">Villager from Minecraft</button>
+    <button onclick="playSound('adrian.mp3')">Adrian</button>
+    <button onclick="playSound('centuries.mp3')">This is another one Joseph Wanted</button>
+    <button onclick="playSound('classic_hurt.mp3')">Hurt</button>
+    <button onclick="playSound('Knocking.mp3')">Knocking</button>
+    <button onclick="playSound('Explosion.mp3')">Explosion</button>
+    <button onclick="playSound('Gunshot.mp3')">Gunshot</button>
+    <button onclick="playSound('HeavenlyMusic.mp3')">Heavenly Music</button>
+    <button onclick="playSound('keyboard-typing-sound-effect.mp3')">Keyboard Typing</button>
+    <button onclick="playSound('m-e-o-w.mp3')">Meow</button>
+    <button onclick="playSound('minecraft_click.mp3')">Minecraft Click</button>
+    <button onclick="playSound('minecraft-drinking-sound-effect.mp3')">Minecraft Drinking</button>
+    <button onclick="playSound('0907.MP3')">Tommy requested this one</button>
+    <button onclick="playSound('alert.mp3')">Alert</button>
+    <button onclick="playSound('apple-pay.mp3')">Apple Pay</button>
+    <button onclick="playSound('discordLEAVE.mp3')">Discord Leave</button>
+    <button onclick="playSound('gunreload.mp3')">Gun Reload</button>
+    <button onclick="playSound('gunshotjbuddens.mp3')">Gunshot (Budden)</button>
+    <button onclick="playSound('HOG-RIDAAA.mp3')">HOG RIDAAA</button>
+    <button onclick="playSound('metal-alert.mp3')">Metal Alert</button>
+    <button onclick="stopAllSounds()">Click this if a teacher is coming</button>
   </div>
-<!-- Trigger Button -->
-<button onclick="showImage()">Jumpscare photo 
-Seb requested this one</button>
 
-<!-- Popup Container -->
-<div id="popup" style="display: none;">
-  <div class="popup-content">
-    <span class="close-btn" onclick="hideImage()">✖</span>
-    <img src="rodde.jpg" alt="Rodde Tribute">
+  <!-- Flying Joe Image -->
+  <img src="dumbassjoe.jpg" id="joe-flyer" alt="Stupid Stupid Joe" style="position: absolute; width: 150px; z-index: 999;">
+
+  <!-- Trigger Button -->
+  <button onclick="showImage()">Jumpscare photo<br>Seb requested this one</button>
+
+  <!-- Popup Container -->
+  <div id="popup" style="display: none;">
+    <div class="popup-content">
+      <span class="close-btn" onclick="hideImage()">✖</span>
+      <img src="rodde.jpg" alt="Rodde Tribute">
+    </div>
   </div>
-</div>
 
   <script src="script.js"></script>
 </body>
