@@ -1,14 +1,11 @@
-let currentAudio = null;
+let activeSounds = [];
 let bonusAudio = [];
 
 function playSound(file) {
-  if (currentAudio) {
-    currentAudio.pause();
-    currentAudio.currentTime = 0;
-  }
-  currentAudio = new Audio(file);
-  currentAudio.volume = 1.0;
-  currentAudio.play();
+  const audio = new Audio(file);
+  audio.volume = 1.0;
+  audio.play();
+  activeSounds.push(audio);
 }
 
 function playBonusSound(file) {
@@ -19,11 +16,12 @@ function playBonusSound(file) {
 }
 
 function stopAllSounds() {
-  if (currentAudio) {
-    currentAudio.pause();
-    currentAudio.currentTime = 0;
-    currentAudio = null;
-  }
+  function stopAllSounds() {
+  activeSounds.forEach(audio => {
+    audio.pause();
+    audio.currentTime = 0;
+  });
+  activeSounds = [];
 }
 
 function stopBonusSounds() {
@@ -54,3 +52,4 @@ function showImage() {
 function hideImage() {
   document.getElementById("popup").style.display = "none";
 }
+
