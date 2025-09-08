@@ -1,38 +1,49 @@
 let currentAudio = null;
+let bonusAudio = [];
 
 function playSound(file) {
-  // Stop any sound that's already playing
   if (currentAudio) {
     currentAudio.pause();
     currentAudio.currentTime = 0;
   }
-
-  // Create and play the new sound
   currentAudio = new Audio(file);
+  currentAudio.volume = 1.0;
   currentAudio.play();
 }
 
-function pauseSound() {
-  // Pause the current sound
-  if (currentAudio) {
-    currentAudio.pause();
-  }
-}
-
-function stopSound() {
-  // Stop and reset the current sound
-  if (currentAudio) {
-    currentAudio.pause();
-    currentAudio.currentTime = 0;
-  }
+function playBonusSound(file) {
+  const audio = new Audio(file);
+  audio.volume = 1.0;
+  audio.play();
+  bonusAudio.push(audio);
 }
 
 function stopAllSounds() {
-  // Fully stop and clear the current sound
   if (currentAudio) {
     currentAudio.pause();
     currentAudio.currentTime = 0;
     currentAudio = null;
+  }
+}
+
+function stopBonusSounds() {
+  bonusAudio.forEach(audio => {
+    audio.pause();
+    audio.currentTime = 0;
+  });
+  bonusAudio = [];
+}
+
+function checkCode() {
+  const input = document.getElementById("codeInput").value;
+  if (input === "2437") {
+    document.getElementById("bonus-buttons").style.display = "block";
+
+    // Flash green
+    document.body.classList.add("flash-green");
+    setTimeout(() => {
+      document.body.classList.remove("flash-green");
+    }, 500);
   }
 }
 
