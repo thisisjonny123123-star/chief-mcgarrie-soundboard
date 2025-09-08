@@ -72,4 +72,8 @@ body {
   background-color: #4CAF50;
   transition: background-color 0.5s ease;
 }
+body.flash-green {
+  background-color: #4CAF50;
+  transition: background-color 0.5s ease;
+}
 
