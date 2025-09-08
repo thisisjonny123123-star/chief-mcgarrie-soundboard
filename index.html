@@ -9,6 +9,18 @@
 
     Also joe yeah make sure to lock your basement window next time 🙏
   </h1>
+<!-- Secret Unlock Box -->
+<div id="unlock-box" style="position: fixed; top: 10px; right: 10px;">
+  <input type="text" id="codeInput" placeholder="Enter Joe's house #" />
+  <button onclick="checkCode()">Unlock</button>
+</div>
+
+<!-- Hidden Bonus Buttons -->
+<div id="bonus-buttons" style="display: none; margin-top: 10px;">
+  <button onclick="playBonusSound('hubintro.mp3')">hub sound</button>
+  <button onclick="playBonusSound('clapping.mp3')">Clapping (Filmed from joseph)</button>
+  <button onclick="stopBonusSounds()">Cancel Bonus Sounds</button>
+</div>
 
   <!-- Sound Buttons -->
   <button onclick="playSound('Buzzer.mp3')">Buzzer</button>
@@ -28,10 +40,10 @@
   <button onclick="playSound('adrian.mp3')">Adrian</button>
   <button onclick="playSound('centuries.mp3')">This is another one Joseph Wanted</button>
   <button onclick="playSound('classic_hurt.mp3')"> Hurt</button>
-  <button onclick="playSound('crazy-realistic-knocking-sound-troll-twitter.mp3')">Knocking</button>
-  <button onclick="playSound('explosion-meme_dTCf4Hs.mp3')">Explosion</button>
-  <button onclick="playSound('gunshotbudden.mp3')">Gunshot</button>
-  <button onclick="playSound('heavenly-music-gaming-sound-effect-h.mp3')">Heavenly Music</button>
+  <button onclick="playSound('Knocking.mp3')">Knocking</button>
+  <button onclick="playSound('Explosion.mp3')">Explosion</button>
+  <button onclick="playSound('Gunshot.mp3')">Gunshot</button>
+  <button onclick="playSound('HeavenlyMusic.mp3')">Heavenly Music</button>
   <button onclick="playSound('keyboard-typing-sound-effect.mp3')">Keyboard Typing</button>
   <button onclick="playSound('m-e-o-w.mp3')">Meow</button>
   <button onclick="playSound('minecraft_click.mp3')">Minecraft Click</button>
@@ -60,6 +72,4 @@ Seb requested this one</button>
   <script src="script.js"></script>
 </body>
 </html>
-
-
 
