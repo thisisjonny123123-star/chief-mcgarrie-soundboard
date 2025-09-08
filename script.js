@@ -16,7 +16,6 @@ function playBonusSound(file) {
 }
 
 function stopAllSounds() {
-  function stopAllSounds() {
   activeSounds.forEach(audio => {
     audio.pause();
     audio.currentTime = 0;
