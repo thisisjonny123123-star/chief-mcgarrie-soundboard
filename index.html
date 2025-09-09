@@ -5,9 +5,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>For your own good DO NOT play the sounds Joe requested 🙏 💔<br>
-    Also Joe yeah make sure to lock your basement window next time 🙏
-  </h1>
+  <h1>Meme Soundboard</h1>
 
   <!-- Secret Unlock Box -->
   <div id="unlock-box" style="position: fixed; top: 10px; right: 10px;">
@@ -33,11 +31,14 @@
     <button onclick="playSound('Heheheha.mp3')">Heheheha</button>
     <button onclick="playSound('MiniPekka.mp3')">Mini Pekka</button>
     <button onclick="playSound('Syfm.mp3')">Syfm</button>
-    <button onclick="playSound('phonetext.mp3')">iPhone Ding 👍</button>
+
+    <!-- Use ONLY this iPhone ding with tracking -->
+    <button onclick="playDingAndTrack()">iPhone Ding 👍</button>
+
     <button onclick="playSound('nomnomnom.mp3')">Joe wanted this sound</button>
     <button onclick="playSound('minecraft-villager-sound-effect.mp3')">Villager from Minecraft</button>
     <button onclick="playSound('adrian.mp3')">Adrian</button>
-    <button onclick="playSound('centuries.mp3')">This is another one Joseph Wanted</button>
+    <button onclick="playSound('centuries.mp3')">Centuries</button>
     <button onclick="playSound('classic_hurt.mp3')">Hurt</button>
     <button onclick="playSound('Knocking.mp3')">Knocking</button>
     <button onclick="playSound('Explosion.mp3')">Explosion</button>
@@ -47,7 +48,11 @@
     <button onclick="playSound('m-e-o-w.mp3')">Meow</button>
     <button onclick="playSound('minecraft_click.mp3')">Minecraft Click</button>
     <button onclick="playSound('minecraft-drinking-sound-effect.mp3')">Minecraft Drinking</button>
-    <button onclick="playSound('0907.MP3')">Tommy requested this one</button>
+
+    <div id="tommy-button" style="display: none;">
+      <button onclick="playSound('0907.MP3')">2nd GRADERS WOOOHOO</button>
+    </div>
+
     <button onclick="playSound('alert.mp3')">Alert</button>
     <button onclick="playSound('apple-pay.mp3')">Apple Pay</button>
     <button onclick="playSound('discordLEAVE.mp3')">Discord Leave</button>
@@ -55,25 +60,27 @@
     <button onclick="playSound('gunshotjbuddens.mp3')">Gunshot (Budden)</button>
     <button onclick="playSound('HOG-RIDAAA.mp3')">HOG RIDAAA</button>
     <button onclick="playSound('metal-alert.mp3')">Metal Alert</button>
-    <button onclick="stopAllSounds()">Click this if a teacher is coming</button>
+
+    <button onclick="stopAllSounds()">Stop All Sounds</button>
   </div>
 
-  <!-- Flying Joe Image -->
-  <img src="dumbassjoe.jpg" id="joe-flyer" alt="Stupid Stupid Joe" style="position: absolute; width: 150px; z-index: 999;">
+  <!-- Optional: add joe-flyer image if you want the animation -->
+  <!-- <img src="dumbassjoe.jpg" id="joe-flyer" alt="Stupid Stupid Joe" style="position: absolute; width: 150px; z-index: 999;"> -->
 
-  <!-- Trigger Button -->
-  <button onclick="showImage()">Jumpscare photo<br>Seb requested this one</button>
-
-  <!-- Popup Container -->
+  <!-- Optional popup elements if you use showImage()/hideImage() -->
+  <!--
   <div id="popup" style="display: none;">
     <div class="popup-content">
       <span class="close-btn" onclick="hideImage()">✖</span>
       <img src="rodde.jpg" alt="Rodde Tribute">
     </div>
   </div>
+  -->
 
+  <!-- Make sure the script is included -->
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
