@@ -97,13 +97,7 @@ function playDingAndTrack() {
   }
 }
 
-// 🧱 Fake "Page Not Found" overlay
-function removeFake404() {
-  const overlay = document.getElementById("fake-404");
-  if (overlay) overlay.style.display = "none";
-}
-
-// 🧃 Start animation and overlay logic
+// 🧃 Start animation safely
 window.addEventListener("load", () => {
   const joe = document.getElementById("joe-flyer");
   if (joe) {
@@ -111,6 +105,7 @@ window.addEventListener("load", () => {
     requestAnimationFrame(animateJoe);
   }
 });
+
 
 
 
