@@ -2,18 +2,15 @@ let activeSounds = [];
 let bonusAudio = [];
 let dingClickCount = 0;
 
-// Play regular sounds (overlap enabled)
+// 🔊 Play regular sounds (overlapping)
 function playSound(file) {
   const audio = new Audio(file);
   audio.volume = 1.0;
-  audio.play().catch(() => {
-    // If a browser blocks autoplay without gesture, clicks should allow it.
-    // Keeping catch to avoid unhandled promise errors.
-  });
+  audio.play().catch(() => {});
   activeSounds.push(audio);
 }
 
-// Play bonus sounds
+// 🔊 Play bonus sounds
 function playBonusSound(file) {
   const audio = new Audio(file);
   audio.volume = 1.0;
@@ -21,21 +18,31 @@ function playBonusSound(file) {
   bonusAudio.push(audio);
 }
 
-// Stop all sounds
+// 🔇 Stop all sounds
 function stopAllSounds() {
-  activeSounds.forEach(a => { a.pause(); a.currentTime = 0; });
+  activeSounds.forEach(audio => {
+    audio.pause();
+    audio.currentTime = 0;
+  });
   activeSounds = [];
-  bonusAudio.forEach(a => { a.pause(); a.currentTime = 0; });
+
+  bonusAudio.forEach(audio => {
+    audio.pause();
+    audio.currentTime = 0;
+  });
   bonusAudio = [];
 }
 
-// Stop only bonus sounds
+// 🔇 Stop only bonus sounds
 function stopBonusSounds() {
-  bonusAudio.forEach(a => { a.pause(); a.currentTime = 0; });
+  bonusAudio.forEach(audio => {
+    audio.pause();
+    audio.currentTime = 0;
+  });
   bonusAudio = [];
 }
 
-// Unlock bonus buttons with Joe's house code
+// 🔐 Unlock bonus buttons with Joe's house code
 function checkCode() {
   const input = document.getElementById("codeInput")?.value || "";
   if (input === "2437") {
@@ -47,24 +54,26 @@ function checkCode() {
   }
 }
 
-// Optional popup helpers (only do something if elements exist)
+// 😱 Show tribute popup
 function showImage() {
   const popup = document.getElementById("popup");
   if (popup) popup.style.display = "flex";
 }
+
+// ❌ Hide tribute popup
 function hideImage() {
   const popup = document.getElementById("popup");
   if (popup) popup.style.display = "none";
 }
 
-// Animate dumbassjoe.jpg in circles (only if image exists)
+// 🌀 Animate dumbassjoe.jpg in circles (optional)
 let angle = 0;
 function animateJoe() {
   const joe = document.getElementById("joe-flyer");
-  if (!joe) return; // Guard: no image, no animation
+  if (!joe) return;
 
   const radius = 150;
-  const centerX = window.innerWidth / 2 - 75; // center minus half width
+  const centerX = window.innerWidth / 2 - 75;
   const centerY = window.innerHeight / 2 - 75;
 
   angle += 0.05;
@@ -77,17 +86,7 @@ function animateJoe() {
   requestAnimationFrame(animateJoe);
 }
 
-// Start animation safely
-window.addEventListener("load", () => {
-  if (document.getElementById("joe-flyer")) {
-    // Ensure positioned absolutely for movement
-    const joe = document.getElementById("joe-flyer");
-    joe.style.position = "absolute";
-    requestAnimationFrame(animateJoe);
-  }
-});
-
-// Track iPhone Ding clicks to unlock Tommy's sound
+// 🕵️‍♂️ Track iPhone Ding clicks to unlock Tommy's sound
 function playDingAndTrack() {
   playSound('phonetext.mp3');
   dingClickCount++;
@@ -97,5 +96,21 @@ function playDingAndTrack() {
     dingClickCount = 0;
   }
 }
+
+// 🧱 Fake "Page Not Found" overlay
+function removeFake404() {
+  const overlay = document.getElementById("fake-404");
+  if (overlay) overlay.style.display = "none";
+}
+
+// 🧃 Start animation and overlay logic
+window.addEventListener("load", () => {
+  const joe = document.getElementById("joe-flyer");
+  if (joe) {
+    joe.style.position = "absolute";
+    requestAnimationFrame(animateJoe);
+  }
+});
+
 
 
