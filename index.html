@@ -1,29 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Study Guide for TKAM</title>
+  <title>Power School Chicago</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>Meme Soundboard</h1>
 
-  <!-- Secret Unlock Box -->
-  <div id="unlock-box" style="position: fixed; top: 10px; right: 10px;">
-    <input type="text" id="codeInput" placeholder="Enter Joes house number 2437" />
-    <button onclick="checkCode()">Unlock</button>
-  </div>
-
-  <!-- Hidden Bonus Buttons -->
-  <div id="bonus-buttons" style="display: none; margin-top: 10px;">
-    <button onclick="playBonusSound('hubintro.mp3')">hub sound</button>
-    <button onclick="playBonusSound('clapping.mp3')">Clapping (Filmed from joseph)</button>
-    <button onclick="stopBonusSounds()">Cancel Bonus Sounds</button>
-  </div>
-
   <!-- Sound Buttons -->
   <div id="sound-buttons">
     <button onclick="playSound('Buzzer.mp3')">Buzzer</button>
-    <button onclick="playSound('ChiefMagrie.mp3')">Chief Magpie - Sweet Child of Mine</button>
+    <button onclick="playSound('ChiefMagrie.mp3')">Sweet Child of Mine</button>
     <button onclick="playSound('ClashStart.mp3')">Clash Start</button>
     <button onclick="playSound('Ding.mp3')">Ding</button>
     <button onclick="playSound('GtaDeath.mp3')">GTA Death</button>
@@ -31,15 +18,12 @@
     <button onclick="playSound('Heheheha.mp3')">Heheheha</button>
     <button onclick="playSound('MiniPekka.mp3')">Mini Pekka</button>
     <button onclick="playSound('Syfm.mp3')">Syfm</button>
-
-    <!-- Use ONLY this iPhone ding with tracking -->
-    <button onclick="playDingAndTrack()">iPhone Ding 👍</button>
-
-    <button onclick="playSound('nomnomnom.mp3')">Joe wanted this sound</button>
-    <button onclick="playSound('minecraft-villager-sound-effect.mp3')">Villager from Minecraft</button>
-    <button onclick="playSound('adrian.mp3')">Adrian</button>
-    <button onclick="playSound('centuries.mp3')">Centuries</button>
-    <button onclick="playSound('classic_hurt.mp3')">Hurt</button>
+    <button onclick="playDingAndTrack()">phonetext.mp3</button>
+    <button onclick="playSound('nomnomnom.mp3')">nomnomnom.mp3</button>
+    <button onclick="playSound('minecraft-villager-sound-effect.mp3')">Villager</button>
+    <button onclick="playSound('adrian.mp3')">adrian.mp3</button>
+    <button onclick="playSound('centuries.mp3')">centuries.mp3</button>
+    <button onclick="playSound('classic_hurt.mp3')">classic_hurt.mp3</button>
     <button onclick="playSound('Knocking.mp3')">Knocking</button>
     <button onclick="playSound('Explosion.mp3')">Explosion</button>
     <button onclick="playSound('Gunshot.mp3')">Gunshot</button>
@@ -48,61 +32,19 @@
     <button onclick="playSound('m-e-o-w.mp3')">Meow</button>
     <button onclick="playSound('minecraft_click.mp3')">Minecraft Click</button>
     <button onclick="playSound('minecraft-drinking-sound-effect.mp3')">Minecraft Drinking</button>
-
     <div id="tommy-button" style="display: none;">
-      <button onclick="playSound('0907.MP3')">2nd GRADERS WOOOHOO</button>
+      <button onclick="playSound('0907.MP3')">0907.MP3</button>
     </div>
-
     <button onclick="playSound('alert.mp3')">Alert</button>
     <button onclick="playSound('apple-pay.mp3')">Apple Pay</button>
     <button onclick="playSound('discordLEAVE.mp3')">Discord Leave</button>
     <button onclick="playSound('gunreload.mp3')">Gun Reload</button>
-    <button onclick="playSound('gunshotjbuddens.mp3')">Gunshot (Budden)</button>
+    <button onclick="playSound('gunshotjbuddens.mp3')">Gunshot Budden</button>
     <button onclick="playSound('HOG-RIDAAA.mp3')">HOG RIDAAA</button>
     <button onclick="playSound('metal-alert.mp3')">Metal Alert</button>
-
     <button onclick="stopAllSounds()">Stop All Sounds</button>
   </div>
 
-  <!-- Optional: add joe-flyer image if you want the animation -->
-  <!-- <img src="dumbassjoe.jpg" id="joe-flyer" alt="Stupid Stupid Joe" style="position: absolute; width: 150px; z-index: 999;"> -->
-
-  <!-- Optional popup elements if you use showImage()/hideImage() -->
-  <!--
-  <div id="popup" style="display: none;">
-    <div class="popup-content">
-      <span class="close-btn" onclick="hideImage()">✖</span>
-      <img src="rodde.jpg" alt="Rodde Tribute">
-    </div>
-  </div>
-  -->
-
-  <!-- Make sure the script is included -->
   <script src="script.js"></script>
 </body>
-<div id="fake-404" style="
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
-  color: white;
-  font-size: 5vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  flex-direction: column;
-">
-  <img src="404.png" alt="Page Not Found" style="max-width: 80%; margin-bottom: 20px;">
-  <div>Page Not Found</div>
-</div>
-
-
-
 </html>
-
-
-
-
