@@ -28,3 +28,17 @@ function playDingAndTrack() {
     dingClickCount = 0;
   }
 }
+function unlockSite() {
+  const input = document.getElementById("entryCode")?.value || "";
+  if (input === "2437") {
+    const gate = document.getElementById("code-gate");
+    if (gate) {
+      gate.style.transition = "opacity 1s ease";
+      gate.style.opacity = "0";
+      setTimeout(() => gate.style.display = "none", 1000);
+    }
+  } else {
+    alert("Incorrect code.");
+  }
+}
+
