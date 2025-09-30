@@ -5,6 +5,26 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="code-gate" style="
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-size: 2rem;
+">
+  <p>Enter Access Code</p>
+  <input type="text" id="entryCode" placeholder="Code" style="padding: 10px; font-size: 1.2rem;" />
+  <button onclick="unlockSite()" style="margin-top: 20px;">Enter</button>
+</div>
+
   <h1>Meme Soundboard</h1>
 
   <!-- Sound Buttons -->
@@ -58,4 +78,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
