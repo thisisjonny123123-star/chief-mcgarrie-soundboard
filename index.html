@@ -1,83 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Power School Chicago</title>
+  <title>Typing School</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="code-gate" style="
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  font-size: 2rem;
-">
-  <p>Enter Access Code</p>
-  <input type="text" id="entryCode" placeholder="Code" style="padding: 10px; font-size: 1.2rem;" />
-  <button onclick="unlockSite()" style="margin-top: 20px;">Enter</button>
-</div>
-
-  <h1>Meme Soundboard</h1>
-
-  <!-- Sound Buttons -->
-  <div id="sound-buttons">
-    <button onclick="playSound('Buzzer.mp3')">Buzzer</button>
-    <button onclick="playSound('ChiefMagrie.mp3')">Sweet Child of Mine</button>
-    <button onclick="playSound('ClashStart.mp3')">Clash Start</button>
-    <button onclick="playSound('Ding.mp3')">Ding</button>
-    <button onclick="playSound('GtaDeath.mp3')">GTA Death</button>
-    <button onclick="playSound('GtaMissionComplete.mp3')">Mission Complete</button>
-    <button onclick="playSound('Heheheha.mp3')">Heheheha</button>
-    <button onclick="playSound('MiniPekka.mp3')">Mini Pekka</button>
-    <button onclick="playSound('Syfm.mp3')">Syfm</button>
-    <button onclick="playDingAndTrack()">phonetext.mp3</button>
-    <button onclick="playSound('nomnomnom.mp3')">nomnomnom.mp3</button>
-    <button onclick="playSound('minecraft-villager-sound-effect.mp3')">Villager</button>
-    <button onclick="playSound('adrian.mp3')">adrian.mp3</button>
-    <button onclick="playSound('centuries.mp3')">centuries.mp3</button>
-    <button onclick="playSound('classic_hurt.mp3')">classic_hurt.mp3</button>
-    <button onclick="playSound('Knocking.mp3')">Knocking</button>
-    <button onclick="playSound('Explosion.mp3')">Explosion</button>
-    <button onclick="playSound('Gunshot.mp3')">Gunshot</button>
-    <button onclick="playSound('HeavenlyMusic.mp3')">Heavenly Music</button>
-    <button onclick="playSound('keyboard-typing-sound-effect.mp3')">Keyboard Typing</button>
-    <button onclick="playSound('m-e-o-w.mp3')">Meow</button>
-    <button onclick="playSound('minecraft_click.mp3')">Minecraft Click</button>
-    <button onclick="playSound('minecraft-drinking-sound-effect.mp3')">Minecraft Drinking</button>
-    <div id="tommy-button" style="display: none;">
-      <button onclick="playSound('0907.MP3')">0907.MP3</button>
+  <!-- Fake Typing Site UI -->
+  <div id="typing-ui">
+    <div class="top-bar">
+      <span class="nav-link">Lessons</span>
+      <span class="nav-link">Login</span>
+      <span class="nav-link">Sign Up</span>
     </div>
-    <button onclick="playSound('alert.mp3')">Alert</button>
-    <button onclick="playSound('apple-pay.mp3')">Apple Pay</button>
-    <button onclick="playSound('discordLEAVE.mp3')">Discord Leave</button>
-    <button onclick="playSound('gunreload.mp3')">Gun Reload</button>
-    <button onclick="playSound('gunshotjbuddens.mp3')">Gunshot Budden</button>
-    <button onclick="playSound('HOG-RIDAAA.mp3')">HOG RIDAAA</button>
-    <button onclick="playSound('metal-alert.mp3')">Metal Alert</button>
-    <button onclick="playSound('Jawharp.mp3')">Jaw Harp</button>
-    <button onclick="playSound('dexter.mp3')">Silent Night Holy night</button>
-    <button onclick="playSound('Fahh.mp3')">Fahh</button>
-    <button onclick="playSound('Babylaugh.mp3')">Baby Laff (leader)</button>
-    <button onclick="playSound('Laugh2.mp3')">Laugh 2</button>
-    <button onclick="playSound('Evomegaknight.mp3')">Mega knight</button>
-    <button onclick="playSound('enrique.mp3')">ENRIQEEE</button>
-    <button onclick="playSound('idk.mp3')">Rare footage of you talking</button>
-    <button onclick="playSound('Phonecall.mp3')">Phone call</button>
-    <button onclick="playSound('Wspeed.mp3')">W speed ♥</button>
-    <button onclick="stopAllSounds()">Stop All Sounds</button>
+
+    <p class="tagline">Used by more than 7000 schools!</p>
+    <p class="subtagline">90% of kids that use this course double their typing speed!</p>
+
+    <div id="code-gate">
+      <p class="code-label">Enter Class Code</p>
+      <input type="text" id="entryCode" placeholder="Code" />
+      <button onclick="unlockSite()">Enter</button>
+    </div>
+
+    <div id="slideshow">
+      <img src="typing.png" class="slide active" />
+      <img src="typing2.png" class="slide" />
+    </div>
+  </div>
+
+  <!-- Meme Soundboard (hidden until unlocked) -->
+  <div id="soundboard" style="display: none;">
+    <h1>send requests btw Meme Soundboard</h1>
+    <div id="sound-buttons">
+      <button onclick="playSound('Buzzer.mp3')">Buzzer</button>
+      <button onclick="playSound('ChiefMagrie.mp3')">Sweet Child of Mine</button>
+      <button onclick="playSound('ClashStart.mp3')">Clash Start</button>
+      <button onclick="playSound('Ding.mp3')">Ding</button>
+      <button onclick="playSound('GtaDeath.mp3')">GTA Death</button>
+      <button onclick="playSound('GtaMissionComplete.mp3')">Mission Complete</button>
+      <button onclick="playSound('Heheheha.mp3')">Heheheha</button>
+      <button onclick="playSound('MiniPekka.mp3')">Mini Pekka</button>
+      <button onclick="playSound('Syfm.mp3')">Syfm</button>
+      <button onclick="playDingAndTrack()">phonetext.mp3</button>
+      <button onclick="playSound('nomnomnom.mp3')">nomnomnom.mp3</button>
+      <button onclick="playSound('minecraft-villager-sound-effect.mp3')">Villager</button>
+      <button onclick="playSound('adrian.mp3')">adrian.mp3</button>
+      <button onclick="playSound('centuries.mp3')">centuries.mp3</button>
+      <button onclick="playSound('classic_hurt.mp3')">classic_hurt.mp3</button>
+      <button onclick="playSound('Knocking.mp3')">Knocking</button>
+      <button onclick="playSound('Explosion.mp3')">Explosion</button>
+      <button onclick="playSound('Gunshot.mp3')">Gunshot</button>
+      <button onclick="playSound('HeavenlyMusic.mp3')">Heavenly Music</button>
+      <button onclick="playSound('keyboard-typing-sound-effect.mp3')">Keyboard Typing</button>
+      <button onclick="playSound('m-e-o-w.mp3')">Meow</button>
+      <button onclick="playSound('minecraft_click.mp3')">Minecraft Click</button>
+      <button onclick="playSound('minecraft-drinking-sound-effect.mp3')">Minecraft Drinking</button>
+      <div id="tommy-button" style="display: none;">
+        <button onclick="playSound('0907.MP3')">0907.MP3</button>
+      </div>
+      <button onclick="playSound('alert.mp3')">Alert</button>
+      <button onclick="playSound('apple-pay.mp3')">Apple Pay</button>
+      <button onclick="playSound('discordLEAVE.mp3')">Discord Leave</button>
+      <button onclick="playSound('gunreload.mp3')">Gun Reload</button>
+      <button onclick="playSound('gunshotjbuddens.mp3')">Gunshot Budden</button>
+      <button onclick="playSound('HOG-RIDAAA.mp3')">HOG RIDAAA</button>
+      <button onclick="playSound('metal-alert.mp3')">Metal Alert</button>
+      <button onclick="playSound('Jawharp.mp3')">Jaw Harp</button>
+      <button onclick="playSound('dexter.mp3')">Silent Night Holy night</button>
+      <button onclick="playSound('Fahh.mp3')">Fahh</button>
+      <button onclick="playSound('Babylaugh.mp3')">Baby Laff (leader)</button>
+      <button onclick="playSound('Laugh2.mp3')">Laugh 2</button>
+      <button onclick="playSound('Evomegaknight.mp3')">Mega knight</button>
+      <button onclick="playSound('enrique.mp3')">ENRIQEEE</button>
+      <button onclick="playSound('idk.mp3')">Rare footage of you talking</button>
+      <button onclick="playSound('Phonecall.mp3')">Phone call</button>
+      <button onclick="playSound('Wspeed.mp3')">W speed ♥</button>
+      <button onclick="stopAllSounds()">Stop All Sounds</button>
+    </div>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
