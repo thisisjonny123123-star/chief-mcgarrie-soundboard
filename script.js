@@ -1,7 +1,6 @@
 let activeSounds = [];
 let dingClickCount = 0;
 
-// Play regular sounds
 function playSound(file) {
   const audio = new Audio(file);
   audio.volume = 1.0;
@@ -9,7 +8,6 @@ function playSound(file) {
   activeSounds.push(audio);
 }
 
-// Stop all sounds
 function stopAllSounds() {
   activeSounds.forEach(audio => {
     audio.pause();
@@ -18,7 +16,16 @@ function stopAllSounds() {
   activeSounds = [];
 }
 
-// Track iPhone Ding clicks to unlock Tommy's sound
+function unlockSite() {
+  const input = document.getElementById("entryCode")?.value || "";
+  if (input === "2437") {
+    document.getElementById("typing-ui").style.display = "none";
+    document.getElementById("soundboard").style.display = "block";
+  } else {
+    alert("Incorrect code.");
+  }
+}
+
 function playDingAndTrack() {
   playSound('phonetext.mp3');
   dingClickCount++;
@@ -28,17 +35,16 @@ function playDingAndTrack() {
     dingClickCount = 0;
   }
 }
-function unlockSite() {
-  const input = document.getElementById("entryCode")?.value || "";
-  if (input === "2437") {
-    const gate = document.getElementById("code-gate");
-    if (gate) {
-      gate.style.transition = "opacity 1s ease";
-      gate.style.opacity = "0";
-      setTimeout(() => gate.style.display = "none", 1000);
-    }
-  } else {
-    alert("Incorrect code.");
-  }
-}
 
+let currentSlide = 0;
+function showNextSlide() {
+  const slides = document.querySelectorAll(".slide");
+  slides.forEach((slide, index) => {
+    slide.classList.remove("active");
+    slide.style.opacity = "0";
+  });
+  slides[currentSlide].classList.add("active");
+  slides[currentSlide].style.opacity = "1";
+  currentSlide = (currentSlide + 1) % slides.length;
+}
+setInterval(showNextSlide, 5000);
