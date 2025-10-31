@@ -78,3 +78,23 @@ button {
   font-size: 18px;
   border: none;
   border-radius: 
+  .cover-message {
+  font-size: 2rem;
+  margin: 40px 0;
+  color: #333;
+}
+
+.back-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.back-button:hover {
+  background-color: #1b5e20;
+}
