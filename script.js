@@ -112,3 +112,27 @@ function showNextSlide() {
   currentSlide = (currentSlide + 1) % slides.length;
 }
 setInterval(showNextSlide, 5000);
+// Weighted list for the mystery button
+const mysterySounds = [
+  "troll1.mp3",
+  "papa.mp3",
+  "laugh3.mp3",
+  "charkirk.mp3",
+  "charkirk.mp3",
+  "charkirk.mp3" // appears multiple times = higher chance
+];
+
+function playMystery() {
+  const randomIndex = Math.floor(Math.random() * mysterySounds.length);
+  const chosenSound = mysterySounds[randomIndex];
+  playSound(chosenSound);
+}
+let wspeedCount = 0;
+
+function trackWspeed() {
+  wspeedCount++;
+
+  if (wspeedCount === 15) {
+    document.getElementById("bathroomBtn").style.display = "block";
+  }
+}
